@@ -24,12 +24,12 @@
               hash = "sha256-z4Wt2/64/b6CMs/qFS8Q3n0u/3NbFGWUZIFODCsBTcI=";
             };
 
-            # installPhase = ''
-            #   runHook preInstall
-            #   mkdir -p $out/bin
-            #   cp protopedal $out/bin
-            #   runHook postInstall
-            # '';
+            installPhase = ''
+              runHook preInstall
+              mkdir -p $out/bin
+              cp protopedal $out/bin
+              runHook postInstall
+            '';
           };
         };
       }
