@@ -1,12 +1,12 @@
 {
-  description = "protopedal"
+  description = "protopedal";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, fetchFromGitLab, nixpkgs, flake-utils }:
+  outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
@@ -17,10 +17,10 @@
             pname = "protopedal";
             version = "master";
 
-            src = fetchFromGitLab {
+            src = pkgs.fetchFromGitLab {
               owner = "openirseny";
               repo = "protopedal";
-              rev = "${version}";
+              rev = "master";
               hash = "sha256-z4Wt2/64/b6CMs/qFS8Q3n0u/3NbFGWUZIFODCsBTcI=";
             };
 
