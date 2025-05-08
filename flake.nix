@@ -21,7 +21,7 @@
               owner = "openirseny";
               repo = "protopedal";
               rev = "master";
-              hash = "sha256-eOCx4jeeFtcwGP1hq72HGHvPJKmMNJR3+OTi/U7pd/I=";
+              hash = "sha256-vMjhpWfIAz00F+dz1tAZKW4FbtE/pSolXYgQR4gooVo=";
             };
 
             installPhase = ''
